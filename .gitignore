@@ -1,0 +1,15 @@
+
+*.v2
+*.vsidx
+*.bin
+src/patient-server-service-api/Patient.Server.Service.API/Patient.Server.Service.API/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+src/patient-server-service-api/Patient.Server.Service.API/Patient.Server.Service.API/obj/Debug/net8.0/ApiEndpoints.json
+src/patient-server-service-api/Patient.Server.Service.API/Patient.Server.Service.API/obj/Debug/net8.0/apphost.exe
+src/patient-server-service-api/Patient.Server.Service.API/Patient.Server.Service.API/obj/Debug/net8.0/Patient.Server.Service.API.assets.cache
+src/patient-server-service-api/Patient.Server.Service.API/Patient.Server.Service.API/obj/Debug/net8.0/Patient.Server.Service.API.csproj.BuildWithSkipAnalyzers
+src/patient-server-service-api/Patient.Server.Service.API/Patient.Server.Service.API/obj/Debug/net8.0/Patient.Server.Service.API.csproj.FileListAbsolute.txt
+src/patient-server-service-api/Patient.Server.Service.API/Patient.Server.Service.API/obj/Debug/net8.0/Patient.Server.Service.API.GlobalUsings.g.cs
+src/patient-server-service-api/Patient.Server.Service.API/Patient.Server.Service.API/obj/Patient.Server.Service.API.csproj.nuget.dgspec.json
+src/patient-server-service-api/Patient.Server.Service.API/Patient.Server.Service.API/obj/Patient.Server.Service.API.csproj.nuget.g.props
+src/patient-server-service-api/Patient.Server.Service.API/Patient.Server.Service.API/obj/Patient.Server.Service.API.csproj.nuget.g.targets
+src/patient-server-service-api/Patient.Server.Service.API/Patient.Server.Service.API/obj/project.assets.json
