@@ -2,12 +2,12 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.Functions.Worker;
 using Microsoft.Extensions.Logging;
-using Newtonsoft.Json;
 
 namespace Patient.Server.Service.Funcz
 {
     public class Function1
     {
+        //
         private readonly ILogger<Function1> _logger;
         public class MyData
         {
@@ -35,7 +35,7 @@ namespace Patient.Server.Service.Funcz
             //log.LogInformation("C# HTTP trigger function processed a request.");
 
             string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
-            MyData data = JsonConvert.DeserializeObject<MyData>(requestBody);
+            MyData data = new MyData { Name = "Teehee", Age = 41 };
 
             //string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
             //dynamic data = JsonConvert.DeserializeObject(requestBody);
