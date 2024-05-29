@@ -1,8 +1,10 @@
-﻿namespace Patient.Server.Service.API.Models
+﻿namespace Patient.Server.Service.API.RequestModels
 {
-    public class PatientViewModel
+    public class BookedAttendeesRequestModel
     {
-        public string Id { get; set; }
+        public int BookingId { get; set; }
+        public int AttendeeId { get; set; }
+        public int UserId { get; set; }
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public string Gender { get; set; }

@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Patient.Server.Service.API.Models;
+using Patient.Server.Service.API.RequestModels;
+using System.Net;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -11,62 +13,64 @@ namespace Patient.Server.Service.API.Controllers
     [ApiController]
     public class PatientController : ControllerBase
     {
-        // GET: api/<PatientController>
-        [HttpGet]
-        public IEnumerable<PatientViewModel> Get()
-        {
-            return [ new PatientViewModel { }, new PatientViewModel { }
-            ];
-        }
-
         // GET api/<PatientController>/5
         [Authorize]
         [HttpGet("{id}")]
-        public PatientViewModel Get(int id)
+        public IEnumerable<PatientViewModel> Get(int id)
         {
-            return new PatientViewModel
-            {
+            var patients = new List<PatientViewModel> {
+            new() {
                 Firstname = "Ricky",
                 Lastname = "Citizen",
                 Address = "1111 Bourke Street",
                 AttendeeEmail = "srikaran82@gmail.com",
-                City = "Melbourne",
+                Suburb = "Melbourne",
                 Country = "",
                 Dob = "01/01/1981",
                 Gender = "Male",
                 Id = "c0b7bb14-edc3-4780-92de-95650ae2f5da",
                 Phone = "03 1111 2222",
                 PostCode = "3000",
-                State = "VIC"
+                State = "VIC",
+                MedicareNumber = "",
+                IRN = ""
+            }
             };
+            return patients;
         }
 
         // GET api/<PatientController>/email
-        [HttpGet("{email}, {user}")]
-        public PatientViewModel GetByEmail(string email, string user)
+        [HttpPost]
+        [Route("GetAttendeeForInvoice")]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
+        public PatientViewModelForInvoice GetAttendeeForInvoice(int bookingId, int attendeeId)
         {
-            return new PatientViewModel
+            return new PatientViewModelForInvoice
             {
-
+                Firstname = "Ricky",
+                Lastname = "Citizen",
+                Address = "1111 Bourke Street",
+                Suburb = "Melbourne",
+                Country = "",
+                PostCode = "3000",
+                State = "VIC",
             };
         }
 
         // POST api/<PatientController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        [Route("addOrUpdateAttendee")]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType(typeof(string), (int)HttpStatusCode.OK)]
+        public async Task<ActionResult> AddOrUpdateAttendee([FromBody] IEnumerable<BookedAttendeesRequestModel> request, CancellationToken ct = default)
         {
-        }
-
-        // PUT api/<PatientController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/<PatientController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            var result = new StockOnHandUpdatedResponse
+            {
+                IsErrored = false,
+                ErrorMessage = string.Empty
+            };
+            return Ok(result);
         }
     }
 }
