@@ -29,7 +29,7 @@ namespace Patient.Server.Service.Funcz
 
         [Function("AddUpdatePatients")]
         public static async Task<IActionResult> RunFunctionPost(
-        [HttpTrigger(AuthorizationLevel.Function, "post", Route = "patient/")] HttpRequest req,
+        [HttpTrigger(AuthorizationLevel.Function, "post", Route = "AddUpdatePatients/")] HttpRequest req,
         ILogger log)
         {
             //log.LogInformation("C# HTTP trigger function processed a request.");
@@ -49,7 +49,7 @@ namespace Patient.Server.Service.Funcz
 
         [Function("GetPatientsByBooking")]
         public static async Task<IActionResult> GetPatientByBooking(
-        [HttpTrigger(AuthorizationLevel.Function, "post", Route = "patient/")] HttpRequest req,
+        [HttpTrigger(AuthorizationLevel.Function, "post", Route = "GetPatientsByBooking/")] HttpRequest req,
         ILogger log)
         {
             //log.LogInformation("C# HTTP trigger function processed a request.");
@@ -84,7 +84,7 @@ namespace Patient.Server.Service.Funcz
 
         [Function("GetPatientsAddresses")]
         public static async Task<IActionResult> GetPatientsAddresses(
-       [HttpTrigger(AuthorizationLevel.Function, "post", Route = "patient/")] HttpRequest req,
+       [HttpTrigger(AuthorizationLevel.Function, "post", Route = "GetPatientsAddresses/")] HttpRequest req,
        ILogger log)
         {
             //log.LogInformation("C# HTTP trigger function processed a request.");
