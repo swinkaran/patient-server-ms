@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patient.Server.Service.API", "Patient.Server.Service.API\Patient.Server.Service.API.csproj", "{7CBC6FE2-8411-4746-BDD6-2960ED7E910D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Patient.Server.Service.Funcz", "Patient.Server.Service.Funcz\Patient.Server.Service.Funcz.csproj", "{3403A58D-0FA1-418F-8793-5D806370F82A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Patient.Server.Service.Funcz", "Patient.Server.Service.Funcz\Patient.Server.Service.Funcz.csproj", "{3403A58D-0FA1-418F-8793-5D806370F82A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
