@@ -41,7 +41,7 @@ namespace Patient.Server.Service.Funcz
             var patients = new List<PatientRequest> {
             new() {
                 Firstname = "Ricky",
-                Lastname = "Citizen",
+                Lastname = "Citizen -branch develop",
                 PatientProfileId="",
                 BookingId ="",
                 AttendeeId="",
