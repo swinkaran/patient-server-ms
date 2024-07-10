@@ -25,8 +25,6 @@ namespace Patient.Server.Service.Funcz
         {
             _logger.LogInformation("C# HTTP trigger function processed a request.");
             return new OkObjectResult("Welcome to default patient Rsvp server!");
-        }
-
-       
+        }  
     }
 }
