@@ -21,6 +21,7 @@ namespace Patient.Server.Service.Funcz
         public void Run([EventGridTrigger] CloudEvent cloudEvent)
         {
             _logger.LogInformation("Event type: {type}, Event subject: {subject}", cloudEvent.Type, cloudEvent.Subject);
+            //Logic to update the CDN key
         }
     }
 }
